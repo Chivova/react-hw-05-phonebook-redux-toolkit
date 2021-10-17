@@ -1,0 +1,28 @@
+.contactsList {
+  width: 350px;
+  list-style: none;
+}
+
+.contactsItem {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2196f3;
+}
+
+.contactsBtn {
+  margin-right: 20px;
+  font-weight: 900;
+  border-radius: 5px;
+  color: red;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.contactsBtn:hover {
+  background-color: silver;
+}

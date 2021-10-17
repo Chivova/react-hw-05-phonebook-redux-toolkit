@@ -1,0 +1,18 @@
+.filterWrapp {
+  text-align: center;
+}
+
+.filterTitle {
+  font-size: 24px;
+  color: #2196f3;
+}
+.filterText {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: brown;
+}
+
+.filterInput {
+  width: 100%;
+  padding: 5px;
+}
