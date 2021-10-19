@@ -1,11 +1,13 @@
-import { createStore, combineReducers } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { configureStore } from '@reduxjs/toolkit';
 import phonebookReducer from './phonebook-reducer.js';
 
-const rootReducer = combineReducers({
-  phonebook: phonebookReducer,
-});
+const store = configureStore({
+  reducer: {
+    phonebook: phonebookReducer,
 
-const store = createStore(rootReducer, composeWithDevTools());
+    // работает только в режиме разбработки
+    // devTools: process.env.NODE_ENV === 'development',
+  },
+});
 
 export default store;
