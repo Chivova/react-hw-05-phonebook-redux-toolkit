@@ -1,9 +1,11 @@
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { filterContact } from '../redux/phonebook-actions';
 import s from './Filter.module.css';
 
-function Filter({ value, onChange }) {
+export default function Filter() {
+  const value = useSelector(state => state.phonebook.filter);
+  const dispatch = useDispatch();
+
   return (
     <div className={s.filterWrapp}>
       <h2 className={s.filterTitle}>Contacts</h2>
@@ -13,24 +15,9 @@ function Filter({ value, onChange }) {
           className={s.filterInput}
           type="text"
           value={value}
-          onChange={onChange}
+          onChange={e => dispatch(filterContact(e.target.value))}
         />
       </label>
     </div>
   );
 }
-
-const mapStateToProps = state => ({
-  value: state.phonebook.filter,
-});
-
-const mapDispatchToProps = disphatch => ({
-  onChange: e => disphatch(filterContact(e.target.value)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
-
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
