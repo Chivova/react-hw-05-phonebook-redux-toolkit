@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import PropTypes from 'prop-types';
 import { getContacts } from '../redux/phonebook-selectors';
 import { addContact } from '../redux/phonebook-actions';
 import s from './ContactForm.module.css';
@@ -41,7 +40,9 @@ export default function ContactForm() {
           contact.name.toLocaleLowerCase() === name.toLocaleLowerCase(),
       )
     ) {
-      return alert(`${name} is already in contacts `);
+      return alert(`Name ${name} is already in contacts `);
+    } else if (contacts.find(contact => contact.number === number)) {
+      return alert(`Number ${number} is already in contacts `);
     }
 
     // onSubmit((name, number));
@@ -90,7 +91,3 @@ export default function ContactForm() {
     </form>
   );
 }
-
-// ContactForm.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };

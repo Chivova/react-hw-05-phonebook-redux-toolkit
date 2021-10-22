@@ -20,15 +20,18 @@ export default function ContactList() {
   //   );
   //   return getVisibileContacts(state.phonebook.items, state.phonebook.filter);
   // });
-  window.localStorage.setItem('contacts', JSON.stringify(getContacts));
 
-  const contacts = useSelector(getVisibileContacts);
+  const filteredContacts = useSelector(getVisibileContacts);
+  const contacts = useSelector(getContacts);
+
+  window.localStorage.setItem('contacts', JSON.stringify(contacts));
+
   const dispatch = useDispatch();
 
   const onDeleteContact = id => dispatch(deleteContact(id));
   return (
     <ul className={s.contactsList}>
-      {contacts.map(({ id, name, number }) => (
+      {filteredContacts.map(({ id, name, number }) => (
         <li className={s.contactsItem} key={id}>
           {name}: {number}
           <button
@@ -43,30 +46,6 @@ export default function ContactList() {
     </ul>
   );
 }
-
-// const mapStateToProps = state => {
-//   const { items, filter } = state.phonebook;
-
-//   return {
-//     contacts: getVisibileContacts(items, filter),
-//   };
-// };
-
-// const mapStateToProps = state => ({
-//   contacts: getVisibileContacts(state.phonebook.items, state.phonebook.filter),
-// });
-
-// const mapStateToProps = ({ phonebook: { items, filter } }) => {
-//   window.localStorage.setItem('contacts', JSON.stringify(items));
-
-//   return { contacts: getVisibileContacts(items, filter) };
-// };
-
-// const mapDispatchToProps = dispatch => ({
-//   onClick: id => dispatch(deleteContact(id)),
-// });
-
-// export default connect(mapDispatchToProps)(ContactList);
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
