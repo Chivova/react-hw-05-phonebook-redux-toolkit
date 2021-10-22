@@ -6,8 +6,9 @@ const items = createReducer(
   JSON.parse(window.localStorage.getItem('contacts')) ?? [],
   {
     [addContact]: (state, { payload }) => [...state, payload],
+
     [deleteContact]: (state, { payload }) =>
-      state.filter(({ id }) => id !== payload),
+      state.filter(contact => contact.id !== payload),
   },
 );
 

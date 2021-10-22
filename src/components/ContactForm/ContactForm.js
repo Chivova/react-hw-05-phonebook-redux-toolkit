@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // import PropTypes from 'prop-types';
+import { getContacts } from '../redux/phonebook-selectors';
 import { addContact } from '../redux/phonebook-actions';
 import s from './ContactForm.module.css';
 
 export default function ContactForm() {
-  const contacts = useSelector(state => state.phonebook.items);
+  const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
   // const onSubmit = () => {
   //   dispatch(addContact(name, number));

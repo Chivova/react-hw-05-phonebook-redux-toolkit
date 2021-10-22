@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { filterContact } from '../redux/phonebook-actions';
+import { getFilter } from '../redux/phonebook-selectors';
 import s from './Filter.module.css';
 
 export default function Filter() {
-  const value = useSelector(state => state.phonebook.filter);
+  const value = useSelector(getFilter);
   const dispatch = useDispatch();
 
   return (
