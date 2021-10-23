@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-hw-05-phonebook-redux-toolkit/static/css/main.47481ef5.chunk.css",
+    "main.js": "/react-hw-05-phonebook-redux-toolkit/static/js/main.342e1736.chunk.js",
+    "main.js.map": "/react-hw-05-phonebook-redux-toolkit/static/js/main.342e1736.chunk.js.map",
+    "runtime-main.js": "/react-hw-05-phonebook-redux-toolkit/static/js/runtime-main.2b2cd498.js",
+    "runtime-main.js.map": "/react-hw-05-phonebook-redux-toolkit/static/js/runtime-main.2b2cd498.js.map",
+    "static/css/2.bc922b9c.chunk.css": "/react-hw-05-phonebook-redux-toolkit/static/css/2.bc922b9c.chunk.css",
+    "static/js/2.d70b3afc.chunk.js": "/react-hw-05-phonebook-redux-toolkit/static/js/2.d70b3afc.chunk.js",
+    "static/js/2.d70b3afc.chunk.js.map": "/react-hw-05-phonebook-redux-toolkit/static/js/2.d70b3afc.chunk.js.map",
+    "index.html": "/react-hw-05-phonebook-redux-toolkit/index.html",
+    "static/css/2.bc922b9c.chunk.css.map": "/react-hw-05-phonebook-redux-toolkit/static/css/2.bc922b9c.chunk.css.map",
+    "static/css/main.47481ef5.chunk.css.map": "/react-hw-05-phonebook-redux-toolkit/static/css/main.47481ef5.chunk.css.map",
+    "static/js/2.d70b3afc.chunk.js.LICENSE.txt": "/react-hw-05-phonebook-redux-toolkit/static/js/2.d70b3afc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b2cd498.js",
+    "static/css/2.bc922b9c.chunk.css",
+    "static/js/2.d70b3afc.chunk.js",
+    "static/css/main.47481ef5.chunk.css",
+    "static/js/main.342e1736.chunk.js"
+  ]
+}
